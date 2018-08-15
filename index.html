@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I am Vocal</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/jrac/jrac/style.jrac.css">
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/base/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/custom.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/cropper/dist/cropper.css">
+</head>
+<body>
+
+	<!-- begining -->
+	<div id="menuBar" class="row container">
+				<div class="col-sm-6 col-lg-6 pull-left" style="width: 100%">
+					<img src="assets/img/logo.svg" id="logoImg">
+				</div>
+
+				<div class="col-sm-6 col-lg-6 pull-right">
+					<a href="#nav"><button class="pull-right" id="toggleBar">
+						<i class="fa fa-bars" id="toggleIcon"></i>
+					</button></a>
+				</div>
+	</div>
+
+		<!-- navigation drawer -->
+		<div id="nav">
+			<div id="menuBar2" class="pull-right">
+				<a href="#"><button class="pull-right" id="toggleBar2"> <i class="fa fa-close" id="toggleIcon2" style="color: #0000FF"></i> </button></a>
+			</div>
+
+			<center>
+				<ul id="mobile_nav" style="list-style-type: none; text-align: justify; font-size: 30px; padding-bottom: 10px">
+					<li id="link_">ABOUT US</li>
+					<li id="link_">VOICES</li>
+					<li id="link_">VOICE OUT</li>
+					<li id="link_">TRACK CONVERSATION</li>
+					
+				</ul>
+
+			</center>
+		</div>
+
+	<div id="fullpage">
+		<form action="#" enctype='multipart/form-data'>
+			<section class="section container-fluid" id="section1" data-anchor="slide1" >
+				<center>
+					<div class="container">
+						<img src="assets/img/camera.svg" id="Bigicon">
+						<br><br>
+						<span id="imgTrigger">SELECT FILE</span>
+						<center>
+							<br><br>
+							<input type="file" id="file1" onchange="readURL(this);" name="image" accept="image/*"   style="opacity:0 !important"/>
+						</center>
+					</div>
+				</center>
+
+				<div class="row" id="mobileNext" style="margin-top: 100px">
+					<br><br>
+					<div class="col-sm-12 col-lg-12 pull-right container">
+						<button type="button" id="next" class="pull-right">NEXT <i class="fa fa-long-arrow-right"></i></button>
+					</div>
+				</div>
+			</section>
+
+			<section class="section container-fluid" id="section1" data-anchor="slide2" >
+				<center>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12">
+								<div class="portrait">
+									<img id="resize" >
+									<br>
+								</div>
+								
+							</div>
+
+							<div class="col-sm-12 col-lg-12">
+								<button id="crop" type="button" >CROP</button>
+							</div>
+
+							<div class="col-sm-12 col-lg-12">
+								<div class="row">
+									<div class="col-sm-6 pull-left">
+										<button id="prev" type="button"><i class="fa fa-long-arrow-left"></i> PREV </button>
+									</div>
+
+									<div class="col-sm-6 pull-right">
+										<button id="next" type="button">NEXT  <i class="fa fa-long-arrow-right"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</center>
+				<input type="hidden" name="croppedImg" id="croppedImg">
+			</section>
+
+			<section class="section container-fluid" id="section1" data-anchor="slide3" >
+				<center>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12">
+								<div class="">
+									<img  id="newCroppedImg" style="width: 300px; height: auto">
+								</div>
+							</div>
+							
+							<div class="col-sm-12 col-lg-12">
+								<input type="text" id="name" name="name" class="form-control" placeholder="NAME">
+								
+								<select class="form-control" id="cause" name="cause">
+									<option selected="true">CAUSE</option>
+									<option>SHII</option>
+								</select>
+								<textarea class="form-control" id="more" name="more" placeholder="Tell Us More"></textarea>
+							</div>
+
+							<div class="col-sm-12 col-lg-12">
+								<br>
+								<button type="button" id="next" class="pull-right" onclick="verifyInputFields()">NEXT</button>
+							</div>
+
+						</div>
+					</div>
+				</center>
+			</section>
+
+			<section class="section container-fluid" id="section1" data-anchor="slide4" >
+				<div id="map" style="height: 100vh !important; display: none !important"></div>
+				<center>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12">
+								<input type="telephone" name="telephone" class="form-control" placeholder="Phone Number">
+							</div>
+							<br><br>
+							<div class="col-sm-12 col-lg-12">
+								<input type="text" name="location" id="location" class="form-control" placeholder="Location">
+								<br>
+								<div class="pull-left" style="float: left; color: white">
+									<span style="text-align: left; float: left;">Would you like us to tell you where you are reporting From?</span>
+									<br>
+									<input type="checkbox" name="tell_location" id="tell_location" value="No, Please Hide Location" >
+									<label for="tell_location">No, Please Hide Location</label>
+									<br>
+									<hr>
+								</div>
+								<input type="hidden" name="long" id="long">
+								<input type="hidden" name="lat" id="lat">
+							</div>
+							<br><br>
+							<div class="col-sm-12 col-lg-12">
+								<div class="row">
+									<div class="col-sm-6 pull-left">
+										<button class="next" id="prev" type="button">PREV</button>
+									</div>
+
+									<div class="col-sm-6 pull-right">
+										<button class="next pull-right" style="margin-right: 0px !important" type="button">NEXT</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</center>
+			</section>
+
+			<section class="section container-fluid" id="section1" data-anchor="slide5" >
+				<center>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 col-sm-12">
+								<div class="content pull-left">
+									<span>I</span> <span id="name_"></span>
+									<br>
+									<b>AM VOCAL ABOUT</b> <br>
+
+									<span id="cause_"></span>
+								</div>
+							</div>
+
+							<div class="col-lg-12 col-sm-12">
+								<button class="share">SHARE</button>
+							</div>
+							
+						</div>
+					</div>
+				</center>
+			</section>
+		</form>
+	</div>
+
+	<script type="text/javascript" src="assets/jquery.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="assets/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/fullpage/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script type="text/javascript" src="assets/jrac/jrac/jquery.jrac.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.5/dist/loadingoverlay.min.js"></script>
+	<script type="text/javascript" src="assets/cropper/dist/cropper.js"></script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQZmcsXYIdaO0sU1VOZbeCMLPOScpJVFU&callback=initMap">
+    </script>
+    <canvas id="myCanvas" width="640" height="480" >
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+</body>
+</html>

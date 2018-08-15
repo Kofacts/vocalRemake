@@ -1,0 +1,252 @@
+/** css  **/
+@font-face {
+    font-family: FuturaB;
+    src: url(../assets/fonts/Fuheavy.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Futura-M;
+    src: url(../assets/fonts/Futu.otf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: Bodoni;
+    src: url(../assets/fonts/bodoni.ttf);
+    font-weight: 600;
+}
+body
+{
+	width: 100%;
+	overflow-x: hidden !important;
+	font-family: 'Lato', arial,Heveltica Neue;
+	background:#0000FF;
+	background-repeat: no-repeat;
+}
+div#menuBar
+{
+	/*margin-top:0px !important;
+	padding-top: 0px !important;
+	z-index: 9999;
+	position: fixed;
+	right: 0 !important;
+	margin-left: 10px !important;
+	outline:0px !important;*/
+}
+button.share
+{
+	background: transparent;
+	color: white;
+	font-size: 20px;
+	margin-top: 20px;
+}
+div.content
+{
+	font-size: 30px !important;
+	color: white !important;
+	text-align: left !important;
+}
+img#logoImg
+{
+	height: 50px;
+	width: auto !important;
+	margin:20px;
+	margin-left: 200px;
+}
+button#toggleBar
+{
+	margin-top: -50px;
+	background: transparent;
+	outline: 0px;
+	border:0px;
+}
+i#toggleIcon
+{
+	background: transparent;
+	color: white !important;
+	outline: 0px !important;
+	font-size: 30px !important;
+}
+div#fullpage
+{
+	display: table;
+  	margin: auto;
+  	margin-top: 50px;
+}
+img#Bigicon
+{
+	width: 20%;
+}
+input[type=file]
+{
+	background:transparent;
+	border:0px;
+	outline: 0px;
+	color: white;
+}
+span#imgTrigger
+{
+	font-size: 20px;
+	font-weight: 600;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+button#next
+{
+	font-weight: 600;
+	font-size: 20px;
+	color: white;
+	background: transparent;
+	outline: 0px;
+	border:1px solid white;
+	padding:5px;
+	margin-right: 100px;
+}
+button.next
+{
+	font-weight: 600;
+	font-size: 20px;
+	color: white;
+	background: transparent;
+	outline: 0px;
+	border:1px solid white;
+	padding:5px;
+	margin-right: 100px;
+}
+button#prev
+{
+	font-weight: 600;
+	font-size: 20px;
+	color: white;
+	background: transparent;
+	outline: 0px;
+	border:1px solid white;
+	padding:5px;
+}
+#nav {
+			padding: 20px;
+			text-align: center;
+			position: fixed;
+			z-index: 9999;
+			height: 100%;
+			top: 0;
+			width: 80%;
+			max-width: 100%;
+			background: white !important;
+			box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+		}
+
+		#nav:not(:target) {
+			right: -100%;
+			transition: right 1.5s;
+		}
+
+		#nav:target {
+			right: 0;
+			transition: right 1s;
+		}
+li
+{
+	padding-top: 20px;
+	color: #1B36FF;
+}
+img#resize
+{
+	
+	border:2px solid white;
+}
+img#resize {
+    max-width: 100%;
+    max-height: 100%;
+}
+img#newCroppedImg
+{
+	max-width: 100%;
+    max-height: 100%;	
+}
+button#crop
+{
+	background: transparent;
+	color: white;
+	border:1px solid white;
+	margin-top: 40px;
+	font-weight: bold;
+	font-weight: 600;
+}
+.portrait {
+    height: 200px;
+    width: auto;
+}
+input.form-control
+{
+	border-radius: 0px !important;
+	outline: 0px;
+	color: #0000FF;
+	margin-top: 2px;
+}
+select.form-control
+{
+	border-radius: 0px !important;
+	outline: 0px;
+	color: #0000FF;
+	margin-top: 5px;
+}
+textarea.form-control
+{
+	border-radius: 0px !important;
+	outline: 0px;
+	margin-top: 5px;
+	color: #0000FF;
+}
+.jrac_zoom_slider .ui-slider .ui-slider-horizontal .ui-widget .ui-widget-content .ui-corner-all
+{
+	margin-top: 5px !important;
+}
+div.jrac_viewport
+{
+	margin-bottom: 10px !important;
+}
+@media (max-width: 768px)
+{
+	img#logoImg
+	{
+		margin-left: 0px !important;
+		margin-top: 20px !important;
+	}
+	div#mobileNext
+	{
+		margin-top: 0px !important;
+	}
+	button#next
+	{
+		height: 30px;
+		font-size: 15px;
+	}
+	button.next
+	{
+		height: 30px;
+		font-size: 15px;
+	}
+	button#prev
+	{
+		height: 30px;
+		font-size: 15px;
+	}
+	img#Bigicon
+	{
+		width: 50% !important;
+	}
+	ul#mobile_nav
+	{
+		margin-top: 40px;
+	}
+	li#link_
+	{
+		font-size: 20px;
+
+	}
+	button#next
+	{
+		margin-right: 0px !important;
+	}
+}
