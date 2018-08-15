@@ -38,6 +38,7 @@ $(document).ready(function() {
           $('body').css('background',change);     
   });
 
+
 	$("#Bigicon").click(function () {
     $("#file1").trigger('click');
   	});
@@ -129,6 +130,9 @@ function verifyInputFields()
 		toastr.error('All Fields are Required, Click Prev to go back', 'Bang Bang!!');
 		$.fn.fullpage.setAllowScrolling(false, 'down');
 	}
+    $('span#name_').text(name);
+    $('span#cause_').text(cause);
+
 }
 
 //Geo location
