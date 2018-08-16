@@ -53,6 +53,31 @@ button.share
 	margin-top: 20px;
 	border:1px solid white;
 }
+
+.heroImg {
+  max-width: 100%; 
+  width: 300px;
+  margin: auto;
+}
+.heroImg::after {
+  display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgb(0,0,255,0.8) 0, rgb(0,0,255,0.8) 100%);
+    margin-top: -170px;
+    height: 200px;
+    width: 100%;
+    content: '';
+    margin-bottom: 20px;
+}
+#contentGenerator
+{
+	position: absolute;
+    z-index: 9999;
+    padding-top: 30px;
+    padding-left: 20px;
+    font-size: 4vw;
+    text-align: left;
+}
 div.content
 {
 	font-size: 30px !important;

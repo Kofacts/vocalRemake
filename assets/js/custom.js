@@ -1,5 +1,6 @@
 $('.resize-done').hide();
 $('button#crop').hide();
+$('.heroImg').hide();
 $(document).ready(function() {
 	$('#fullpage').fullpage({
 		//options here
@@ -43,6 +44,14 @@ $(document).ready(function() {
     $.fn.fullpage.moveSectionUp();
   });
 
+    $('input#name').keyup(function() {
+        $('b#nameArea').html($(this).val());
+    });
+
+    $('select#cause').change(function() {
+        $('b#causeArea').html($(this).val());
+    });
+
 
 	$("#Bigicon").click(function () {
     $("#file1").trigger('click');
@@ -59,6 +68,7 @@ $(document).ready(function() {
 		var canvas = $img.cropper('getCroppedCanvas');
 		var canvaURL = canvas.toDataURL('image/jpeg');
 		$('input#croppedImg').val(canvaURL);
+    $('.heroImg').show();
 		document.getElementById('newCroppedImg').src = canvaURL;
 		//log toast
 		toastr.success('Image Successfully Cropped, Click Next to continue', 'Isssshkk')
@@ -137,6 +147,20 @@ function verifyInputFields()
 	}
     $('span#name_').text(name);
     $('span#cause_').text(cause);
+    //do the screenshot
+
+    html2canvas(document.getElementById('heroImg'), {
+            logging: true,
+            profile: true,
+            useCORS: true}).then(function(canvas) {
+        var data = canvas.toDataURL('image/jpeg', 0.9);
+        var src = encodeURI(data);
+        console.log(src);
+        $('input#meme').val(src)
+        document.getElementById('screenshot').src = src;
+        document.getElementById('size').innerHTML = src.length + ' bytes';
+    });
+
 
 }
 
