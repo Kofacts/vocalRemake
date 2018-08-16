@@ -32,6 +32,19 @@ div#menuBar
 	margin-left: 10px !important;
 	outline:0px !important;*/
 }
+input#telephone, input#location
+{
+	background: transparent;
+    border: 0px;
+    border-bottom: 2px dotted white;
+    color: white !important;
+}
+label#phoneLabel
+{
+	color: white;
+	margin-left: -20px;
+    margin-top: 7px;
+}
 button.share
 {
 	background: transparent;

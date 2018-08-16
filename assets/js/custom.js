@@ -35,7 +35,12 @@ $(document).ready(function() {
           draw(imgPath);
           //change background color
           var change = "linear-gradient(rgb(0,0,255,0.8),rgb(0,0,255,0.8)),url(" + imgPath + ")";
-          $('body').css('background',change);     
+          $('body').css({'background':change,'background-size': 'contain', 'background-repeat-y': 'no-repeat', 'background-position': 'center'});     
+  });
+
+  $('button#prev').click(function()
+  {
+    $.fn.fullpage.moveSectionUp();
   });
 
 
