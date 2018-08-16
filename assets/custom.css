@@ -289,3 +289,24 @@ div.jrac_viewport
 		margin-right: 0px !important;
 	}
 }
+@media only screen and (min-width: 1140px) {
+  
+    /* for laptop..*/
+    #contentGenerator
+    {
+    	font-size: 20px !important;
+
+    }
+
+    #newCroppedImg
+    {
+    	height: auto;
+    	width: 400px
+    }
+
+    #heroImg
+    {
+    	width: 400px;
+    }
+
+}
